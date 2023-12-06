@@ -104,3 +104,5 @@ pre_commit_rm_hooks:
 
 nvsmi0:
 	watch -n 0.1 nvidia-smi -i 0
+show_logfile:
+	tail -f <path_to_file>

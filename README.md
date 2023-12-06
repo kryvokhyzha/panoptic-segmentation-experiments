@@ -98,9 +98,9 @@ This repository contains experiments with panoptic segmentation models.
    class to `__all__` list.
 7. Run the following command to start training:
    ```bash
-   make train
+   make run_train
    ```
 8. Run the following command to start testing:
    ```bash
-   make test
+   make run_test
    ```

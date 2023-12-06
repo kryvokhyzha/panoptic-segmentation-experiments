@@ -156,3 +156,10 @@ temp*.py
 
 # models
 *.onnx
+
+# docs
+*.pptx
+*.pdf
+*.ppt
+*.doc
+*.docx

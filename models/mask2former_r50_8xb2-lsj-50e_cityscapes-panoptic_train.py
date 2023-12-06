@@ -131,8 +131,8 @@ model = dict(
     panoptic_fusion_head=dict(
         init_cfg=None,
         loss_panoptic=None,
-        num_stuff_classes=21,  # 53
-        num_things_classes=14,  # 80
+        num_stuff_classes=11,  # 53
+        num_things_classes=8,  # 80
         type="MaskFormerFusionHead",
     ),
     panoptic_head=dict(
@@ -146,22 +146,6 @@ model = dict(
         ],
         loss_cls=dict(
             class_weight=[
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
                 1.0,
                 1.0,
                 1.0,
@@ -333,8 +317,8 @@ model = dict(
         ),
         loss_mask=dict(loss_weight=5.0, reduction="mean", type="CrossEntropyLoss", use_sigmoid=True),
         num_queries=100,
-        num_stuff_classes=21,  # 53
-        num_things_classes=14,  # 80
+        num_stuff_classes=11,  # 53
+        num_things_classes=8,  # 80
         num_transformer_feat_level=3,
         out_channels=256,
         pixel_decoder=dict(
@@ -403,9 +387,9 @@ model = dict(
     ),
     type="Mask2Former",
 )
-num_classes = 35  # 133
-num_stuff_classes = 21  # 53
-num_things_classes = 14  # 80
+num_classes = 19  # 133
+num_stuff_classes = 11  # 53
+num_things_classes = 8  # 80
 optim_wrapper = dict(
     clip_grad=dict(max_norm=0.01, norm_type=2),
     optimizer=dict(
@@ -524,13 +508,13 @@ train_cfg = dict(
             368750,
         ),
     ],
-    max_iters=1000,  # 368750
+    max_iters=368750,  # 368750
     type="IterBasedTrainLoop",
     val_interval=5000,
 )
 train_dataloader = dict(
     batch_sampler=dict(type="AspectRatioBatchSampler"),
-    batch_size=1,  # 2
+    batch_size=2,  # 2
     dataset=dict(
         ann_file="annotations/cityscapes_panoptic_train.json",
         backend_args=None,

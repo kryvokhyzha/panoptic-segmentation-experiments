@@ -1,6 +1,7 @@
 # panoptic-segmentation-experiments
 
 [![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1HcDWOxEYtZG4dqp3HN7gtl20tuvVnZ7D?usp=sharing)
 
 This repository contains experiments with panoptic segmentation models.
